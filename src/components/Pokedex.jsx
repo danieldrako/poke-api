@@ -45,7 +45,7 @@ const Pokedex = () => {
   return (
     <div>
       <HeaderPoke />
-      <h2>Welcome {nameTrainer}, Catch them all.</h2>
+      <h2 className='title'>Welcome {nameTrainer}, Catch them all.</h2>
       <SearchInput setPokeSearch={setPokeSearch} setOptionType={setOptionType} />
       <SelectType 
         optionType={optionType} 

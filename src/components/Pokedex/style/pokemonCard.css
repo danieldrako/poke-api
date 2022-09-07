@@ -5,9 +5,13 @@
   overflow: hidden;
   background-color: white;
   box-shadow: 0 1px 7px #0003;
-  border: 7px solid #B1DBBC;
+  border: 10px inset rgba(28,110,164,0.46);;
   cursor: pointer;
   transition: transform 200ms ease;
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(50deg) rotateY(10deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.5);
+  perspective: 1000px;
+  perspective-origin: 50% -357%;
 }
 .card:hover {
   transform: scale(1.05);
@@ -186,6 +190,7 @@
   top: 15px;
   transform: translateX(-50%);
 }
+
 .card__body {
   margin-top: 70px;
 }

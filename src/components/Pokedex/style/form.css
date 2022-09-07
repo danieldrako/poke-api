@@ -35,3 +35,10 @@ select {
     padding: 5px 7px;
     margin: 1rem 1rem 2rem 1rem;
 }
+.form__btn{
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}

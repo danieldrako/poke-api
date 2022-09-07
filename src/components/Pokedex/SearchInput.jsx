@@ -13,7 +13,9 @@ const SearchInput = ({setPokeSearch, setOptionType}) => {
   return (
     <form onSubmit={handleSubmit}>
       <input id='searchText' type="text" />
-      <button>Search</button>
+      <button className='form__btn'>
+        <img src="public/images/search.svg" alt="" />
+      </button>
     </form>
   )
 }
