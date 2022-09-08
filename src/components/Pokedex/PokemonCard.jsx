@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import StatPokemon from './StatPokemon'
 import './style/pokemonCard.css'
+import {motion} from 'framer-motion'
+
 
 const PokemonCard = ({url}) => {
 
@@ -18,8 +20,11 @@ const PokemonCard = ({url}) => {
 
   const handleClick = () => navigate(`/pokedex/${pokemon.name}`)
 
+
   return (
-    <article onClick={handleClick} className={`card color-${pokemon?.types[0].type.name}`}>
+ 
+
+<article onClick={handleClick} className={`card color-${pokemon?.types[0].type.name}`}>
       <header className={`card__header bg-${pokemon?.types[0].type.name}`}>
         <img className='card__avatar' src={pokemon?.sprites.other["official-artwork"]["front_default"]} alt="" />
       </header>
@@ -48,6 +53,9 @@ const PokemonCard = ({url}) => {
         </ul>
       </footer>
     </article>
+
+
+    
   )
 }
 

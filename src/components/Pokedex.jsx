@@ -6,7 +6,7 @@ import SearchInput from './Pokedex/SearchInput'
 import SelectType from './Pokedex/SelectType'
 import HeaderPoke from './shared/HeaderPoke'
 import './styles/pokedex.css'
-
+import {motion} from 'framer-motion'
 const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState()
@@ -41,11 +41,24 @@ const Pokedex = () => {
   }, [pokeSearch, optionType])
 
   const nameTrainer = useSelector(state => state.nameTrainer)
-
+const containerVariants = {
+  hidden: {
+    opacity:0,
+    y:'50vh',
+  },
+  show: {
+    opacity: 1,
+    y:0,
+    transition: {
+      type: 'spring',
+      stiffness: 100
+    }
+  }
+}
   return (
-    <div>
+    <motion.div variants={ containerVariants } initial= 'hidden' animate='show'>
       <HeaderPoke />
-      <h2 className='title'>Welcome {nameTrainer}, Catch them all.</h2>
+      <h1 className='title'>Welcome {nameTrainer}, Catch them all.</h1>
       <SearchInput setPokeSearch={setPokeSearch} setOptionType={setOptionType} />
       <SelectType 
         optionType={optionType} 
@@ -62,7 +75,7 @@ const Pokedex = () => {
           ))
         }
       </div>
-    </div>
+    </motion.div>
   )
 }
 
