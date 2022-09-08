@@ -119,11 +119,7 @@ const stats = pokeInfo?.stats
             className='details__moves-item' key={item.move.name} >{ ` ${item.move.name}`}</div> )
         }
       </motion.div> 
-      {/* <div className='stats'>
-        {
-          pokeInfo?.stats.map(item=>  )
-        }
-      </div>  */}
+     
     </motion.article>
   )
 }
