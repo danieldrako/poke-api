@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import StatPokemon from './StatPokemon'
 import './style/pokemonCard.css'
-import {motion} from 'framer-motion'
+
 
 
 const PokemonCard = ({url}) => {
